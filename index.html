@@ -23,7 +23,7 @@
         .bg-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('https://i.ibb.co/YGCTwxZ/MG-5816.jpg');
+            background-image: url('https://i.ibb.co/wFqDn4rw/MG-5816.jpg');
             background-size: cover;
             background-position: center;
             filter: blur(8px) brightness(0.35);
@@ -89,7 +89,7 @@
             to { width: 100%; }
         }
 
-        /* 2. EKRAN (KART VE SPOTIFY) */
+        /* 2. EKRAN (KART VE SPOTIFY BUTONU) */
         #screen2 {
             opacity: 0;
             transform: translateY(20px);
@@ -130,18 +130,32 @@
             margin-bottom: 22px;
         }
 
-        /* SPOTIFY EMBED */
-        .spotify-wrapper {
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        /* SPOTIFY BUTONU */
+        .spotify-btn {
+            background-color: #1DB954;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
         }
 
-        iframe {
-            border: none;
-            width: 100%;
-            height: 80px;
+        .spotify-btn:active {
+            transform: scale(0.95);
+            background-color: #1aa34a;
+        }
+
+        .spotify-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
     </style>
 </head>
@@ -158,15 +172,16 @@
             </div>
         </div>
 
-        <!-- 2. EKRAN: FOTOĞRAF, SÖZ VE SPOTIFY -->
+        <!-- 2. EKRAN: FOTOĞRAF, SÖZ VE SPOTIFY BUTONU -->
         <div id="screen2" class="screen">
             <div class="card">
-                <img src="https://i.ibb.co/6RSH2tSt/MG-5815.jpg" alt="Ece" class="profile-img">
+                <img src="https://i.ibb.co/JFp2KZV7/MG-5815.jpg" alt="Ece" class="profile-img">
                 <p class="main-quote">“Dünyanın en kalabalık yerinde bile gözlerim hep seni arıyor. İyi ki kesişti yollarımız, iyi ki varsın güzelim…”</p>
                 
-                <div class="spotify-wrapper">
-                    <iframe src="https://open.spotify.com/embed/track/5Ftku2ydxC3nkYHlkZU5Tx?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
+                <a href="https://open.spotify.com/track/5Ftku2ydxC3nkYHlkZU5Tx?si=G2rhr7sCT1iNT8It_fTRYA&utm_source=copy-link" target="_blank" class="spotify-btn">
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.3 1.02zm1.44-3.3c-.301.42-.84.6-1.26.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.38 9.72-.72 13.56 1.62.42.24.54.84.18 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.78-.18-.6.18-1.2.78-1.38 4.2-1.26 11.28-.96 15.48 1.5.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+                    Şarkıyı Dinle 🎵
+                </a>
             </div>
         </div>
     </div>
